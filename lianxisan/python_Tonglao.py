@@ -26,21 +26,17 @@ class  Tonglao:
       #进行一个回合对打，双方的武力值和血量发生改变
          my_hp=self.hp-your_power
          your_hp=your_hp-self.power
-      #比较血量，得出输赢值
+      #比较血量，得出输赢值，我的血量比你的少，则你赢
          if my_hp<your_hp:
               print("我的血量是",my_hp)
               print("你的血量是",your_hp)
               print("你赢了")
+      #若我的血量比你多，则我赢
          elif your_hp<my_hp:
               print("我的血量是", my_hp)
               print("你的血量是", your_hp)
               print("我赢了")
+      #我两一样多，则打平
          else:
               print("打成了平分")
-#类实例化
-#tonglao=Tonglao(50,10)
-#调用方法
-#tonglao.see_people("秋水")
-#调用方法
-#tonglao.fight_zm(100,60)
 
