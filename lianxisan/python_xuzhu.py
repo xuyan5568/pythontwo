@@ -5,6 +5,6 @@ class Xuzhu(Tonglao):
      def read(self):
          print("罪过罪过")
 #类实例化
-xuzhu=Xuzhu(100,30)
+xuzhu=Xuzhu(100,20)
 #调用类的方法
 xuzhu.read()

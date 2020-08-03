@@ -38,5 +38,5 @@ class  Tonglao:
               print("我赢了")
       #我两一样多，则打平
          else:
-              print("打成了平分")
+              print("打成了平分了")
 
