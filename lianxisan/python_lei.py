@@ -89,7 +89,6 @@ class Film():
 film=Film("英雄","张艺谋","武侠")
 #调用watch方法
 film.watch()
-#打印空行
 print("\n")
 
 #定义天龙八部里面的段誉
