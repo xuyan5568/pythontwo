@@ -15,15 +15,13 @@ with open('./caclt.yml')as f:
     myids_mul= datas["mul"]["name"]
 
 
-
-
 @pytest.fixture(scope="class")
 def get_cal():
     cacl=Calculator()
     return  cacl
 
 
-
+#带参数传递
 @pytest.fixture(params=data_add,ids=myids_add)
 def get_data_add(request):
     print("开始计算")
