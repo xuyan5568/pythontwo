@@ -1,6 +1,8 @@
 #coding=utf-8
+import pytest
 class Testcacl():
 #加法运算
+      @pytest.mark.run(order=1)
       def test_add(self,get_cal,get_data_add):
             #对于a，b为字母的情况
             if isinstance(get_data_add[0],str) or isinstance(get_data_add[1],str):
@@ -13,7 +15,9 @@ class Testcacl():
                     assert  get_data_add[2]== result
                else:
                     assert get_data_add[2] == result
-      #除法运算
+
+       #除法运算
+      @pytest.mark.run(order=4)
       def test_div(self,get_cal,get_data_div):
            #被除数和除数为异常的处理
            if isinstance(get_data_div[0],str) or isinstance(get_data_div[1],str) or get_data_div[1]==0:
@@ -27,6 +31,7 @@ class Testcacl():
                 else:
                     assert get_data_div[2] == result
       #减法运算
+      @pytest.mark.run(order=2)
       def test_sub(self,get_cal,get_data_sub):
             #对于a，b为字母的情况
             if isinstance(get_data_sub[0],str) or isinstance(get_data_sub[1],str):
@@ -41,6 +46,7 @@ class Testcacl():
                     assert get_data_sub[2] == result
 
       #乘法运算
+      @pytest.mark.run(order=3)
       def check_mul(self,get_cal,get_data_mul):
             #对于a，b为字母的情况
             if isinstance(get_data_mul[0],str) or isinstance(get_data_mul[1],str):
